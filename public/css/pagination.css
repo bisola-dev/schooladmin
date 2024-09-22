@@ -1,0 +1,52 @@
+/* public/css/pagination.css */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.pagination .page-item {
+    margin: 0 0.1rem;
+}
+
+.pagination .page-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem; /* Smaller font size */
+    padding: 0.25rem 0.5rem; /* Smaller padding */
+    color: #007bff;
+    text-decoration: none;
+    border: 1px solid #ddd; /* Border to define boundaries */
+    border-radius: 0.25rem; /* Rounded corners */
+    background-color: #fff; /* Background color */
+}
+
+.pagination .page-link svg {
+    width: 0.75rem;  /* Smaller icon size */
+    height: 0.75rem; /* Smaller icon size */
+    color: #007bff;
+}
+
+.pagination .page-link:hover {
+    background-color: #f8f9fa; /* Light background on hover */
+}
+
+.pagination .page-item.disabled .page-link {
+    color: #6c757d;
+    border-color: #ddd; /* Border color for disabled items */
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #007bff; /* Background color for active page */
+    color: #fff; /* Text color for active page */
+    border-color: #007bff; /* Border color for active page */
+}
+/* Override TailwindCSS utility classes */
+.w-5 {
+    width: 1rem !important; /* Force width */
+}
+
+.h-5 {
+    height: 1rem !important; /* Force height */
+}
