@@ -158,20 +158,17 @@
                                             </div>
 
                                         
-                                          
                                             <div class="col-sm-6 col-md-12">
-                                            <div class="form-group">
-                                            <label>Select Session</label>
-                                          <select name="sessid" id="sessid" class="form-control form-control-sm">
-                                          <option value="">Please select a session</option>
-                                            @foreach($seszions as $sess)
-                                            <option value="{{ $sess->id }}" {{ isset($sessid) && $sessid == $sess->id ? 'selected' : '' }}>
-                                              {{ $sessionNames[$sess->id] ?? 'Unknown' }}
-                                             </option>
-                                              @endforeach
-                                            </select>
-                                             </div>
-                                             </div>
+                                                <label>Select Session</label>              
+                                                <select name="sessid" class="form-control form-control-sm" id="sessid" >
+                                                    <option value="">Please select a session</option>
+                                                    @foreach($sessionNames as $index => $sessionName)
+                                                <option value="{{ $index + 1 }}" {{ isset($sessid) && $sessid == ($index + 1) ? 'selected' : '' }}>
+                                                  {{ $sessionName }}
+                                                </option>
+                                                @endforeach
+                                                </select>
+                                            </div>
 
                         <div class="form-group col-md-12">
                     <label for="term">Select Term</label>
