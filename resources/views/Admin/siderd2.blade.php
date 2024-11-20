@@ -1,3 +1,84 @@
+
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Sidebar with Scroll</title>
+    <style>
+        /* Sidebar Styles */
+        .sidebar {
+            position: fixed;
+            top: 50px;
+            left: 0;
+            height: 100vh;
+            width: 250px; /* Sidebar width */
+            background-color: #343a40; /* Dark background for sidebar */
+            overflow: hidden;
+        }
+
+        /* Inner container with scroll enabled */
+        .sidebar-inner {
+            position: relative;
+            overflow-y: auto;
+            height: 100%; /* Full height of sidebar */
+            padding-top: 20px; /* Optional padding for spacing */
+        }
+
+        /* Slimscroll (optional) styling */
+        .slimscroll {
+            scrollbar-width: thin;
+            scrollbar-color: #888 #343a40; /* Example scrollbar thumb and track colors */
+        }
+
+        /* Sidebar Menu Styling */
+        .sidebar-menu ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* Individual menu items */
+        .sidebar-menu li {
+            margin: 0;
+            padding: 0; /* Further reduced padding for less space */
+            display: block;
+        }
+
+        /* Links Styling */
+        .sidebar-menu a {
+            color: #ffffff; /* White text */
+            text-decoration: none;
+            display: flex;
+           align-items: center;
+         
+        }
+
+        /* Hover effect for links */
+        .sidebar-menu a:hover {
+            background-color: #495057; /* Darker background on hover */
+        }
+
+        /* Icon styling */
+        .sidebar-menu i {
+            margin-right: 8px; /* Smaller space between icon and text */
+        }
+
+        /* Scrollbar customization for browsers that support it */
+        .sidebar-inner::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .sidebar-inner::-webkit-scrollbar-thumb {
+            background-color: #888;
+            border-radius: 4px;
+        }
+
+        .sidebar-inner::-webkit-scrollbar-track {
+            background: #343a40;
+        }
+    </style>
+</head>
+<body>  
 <div class="sidebar" id="sidebar">
     <div class="sidebar-inner slimscroll">
         <div id="sidebar-menu" class="sidebar-menu">
@@ -92,3 +173,5 @@
         </div>
     </div>
 </div>
+</body>
+</html>
